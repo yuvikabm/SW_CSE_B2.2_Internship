@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS text styling</title>
+    <style>
+        .font-fam{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2rem;
+            font-weight: bolder;
+            font-style: italic;
+
+            /*font shorthand*/
+            font:italic bolder 2rem Verdana, Geneva, Tahoma, sans-serif;
+
+            /*color*/
+            color: brown;
+            background-color:bisque;
+
+            /*Alignment*/
+            text-align: center;
+            direction: rtl;
+        }
+        .large-para{
+            text-align:justify ;
+            margin: 30px;
+            line-height: 1.6;
+            text-indent: 2em;
+        }
+        .cap{
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-shadow: 2px 2px 4px rgba(2,67 ,3 ,1);
+            letter-spacing: 4px;
+        }
+    </style>
+</head>
+<body>
+    <p class="font-fam">Font Family example</p>
+    <p class="large-para">
+        <span class="cap">India</span>, officially the Republic of India, is a country in South Asia and the world's most populous nation, with an estimated population of over 1.48 billion as of 2026.  It is the seventh-largest country by area, covering approximately 3.29 million square kilometers. A federal parliamentary republic, India is known for its immense cultural, linguistic, and ethnic diversity, operating as a secular democracy with Hindi and English as its official languages.
+    </p>
+</body>
+</html>
