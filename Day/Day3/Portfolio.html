@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Yuvika B M</title>
+<style>
+    /* CSS VARIABLES */
+    :root {
+        --bg: #f1f5f9;
+        --card-bg: white;
+        --dark: #1e293b;
+        --text: #334155;
+        --accent: #2563eb;
+        --space: 20px;
+        --radius: 8px;
+    }
+
+    /* UNIVERSAL SELECTOR */
+    * {
+        box-sizing: border-box;
+    }
+
+    /* BODY */
+    body {
+        margin: 0;
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: Arial, sans-serif;
+    }
+
+    /* NAVIGATION */
+    nav {
+        padding: var(--space);
+        background-color: var(--dark);
+        text-align: center;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    nav a:hover {
+        color: var(--accent);
+    }
+    /* HERO SECTION */
+    header {
+        padding: 60px 20px;
+        text-align: center;
+        background: linear-gradient(
+            135deg,
+            #dbeafe,
+            #f8fafc
+        );
+    }
+    header h1 {
+        color: var(--dark);
+        margin-bottom: 10px;
+    }
+    header p {
+        font-size: 18px;
+    }
+    header a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: var(--accent);
+        color: white;
+        text-decoration: none;
+        border-radius: var(--radius);
+        transition: transform 0.3s;
+    }
+    header a:hover {
+        transform: scale(1.05);
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+        padding: 40px 20px;
+        text-align: center;
+    }
+    section h2 {
+        color: var(--dark);
+        margin-bottom: 20px;
+    }
+
+    /* ABOUT SECTION */
+    #about {
+        background-color: var(--card-bg);
+    }
+    #about img {
+        border-radius: 50%;
+        border: 4px solid var(--accent);
+        margin: 15px;
+
+        transition: transform 0.3s;
+    }
+    #about img:hover {
+        transform: scale(1.05);
+    }
+    #about p {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    /* SKILLS SECTION */
+    #skills {
+        background-color: #eef2ff;
+    }
+    #skills ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+    }
+    #skills li {
+        padding: 10px 15px;
+
+        background-color: var(--accent);
+        color: white;
+
+        border-radius: var(--radius);
+
+        transition: transform 0.3s;
+    }
+    #skills li:hover {
+        transform: translateY(-5px);
+    }
+
+    /* PROJECT SECTION */
+    #projects {
+        background-color: white;
+    }
+    .project-card {
+        width: 300px;
+        margin: auto;
+        padding: var(--space);
+        background-color: var(--card-bg);
+        border: 1px solid #ddd;
+        border-radius: var(--radius);
+        text-align: center;
+        transition: transform 0.3s;
+    }
+    .project-card:hover {
+        transform: translateY(-8px);
+    }
+    .project-card h3 {
+        color: var(--accent);
+    }
+    .project-card a {
+        color: var(--accent);
+        text-decoration: none;
+    }
+    .project-card a:hover {
+        text-decoration: underline;
+    }
+
+    /* CONTACT SECTION */
+    #contact {
+        background-color: var(--bg);
+    }
+    #contact form {
+        width: 500px;
+        max-width: 90%;
+
+        margin: auto;
+        padding: 25px;
+
+        background-color: white;
+
+        border-radius: var(--radius);
+
+        box-shadow: 0 5px 15px #ccc;
+    }
+    #contact label {
+        display: block;
+        text-align: left;
+        margin-top: 10px;
+    }
+    #contact input,
+    #contact select,
+    #contact textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    /* ATTRIBUTE SELECTOR */
+    #contact input[type="email"] {
+        background-color: #f8fafc;
+    }
+
+    /* FOCUS */
+    #contact input:focus,
+    #contact select:focus,
+    #contact textarea:focus {
+        outline: 2px solid var(--accent);
+    }
+
+    /* BUTTON */
+    #contact button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: var(--accent);
+        color: white;
+        border: none;
+        border-radius: var(--radius);
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    #contact button:hover {
+        transform: scale(1.05);
+    }
+
+    /* FOOTER */
+    footer {
+        padding: var(--space);
+        text-align: center;
+        background-color: var(--dark);
+        color: white;
+    }
+
+</style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <h2 class="logo">My Portfolio</h2>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <!-- HERO SECTION -->
+    <header id="home">
+        <h1>Hi, I'm Yuvika B M 👋</h1>
+        <p>
+            I'm a Computer Science Engineering student
+            exploring web development.
+        </p>
+        <a href="#contact" class="button">Contact Me</a>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="profile.jpg" alt="Profile photo" width="200">
+        <p>
+            I am a Computer Science Engineering student interested
+            in programming and web development. I am currently
+            learning HTML, CSS, JavaScript and React.
+        </p>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+        </ul>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2>My Project</h2>
+        <div class="project-card">
+            <h3>Personal Portfolio</h3>
+            <p>
+                A simple personal portfolio website created using
+                HTML and CSS to showcase my skills and learning journey.
+            </p>
+            <a href="#" class="project-link">View Project</a>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Have a project in mind? Let's talk!</p>
+        <form action="#" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name"  placeholder="Enter your name" required>
+            <br>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email"  placeholder="Enter your email" required>
+            <br>
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+                <option value="">-- Select a topic --</option>
+                <option value="hire">Project discussion</option>
+                <option value="collab">I want to collaborate</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"  placeholder="Tell me about your project..."
+                required></textarea>
+                <br>
+            <button type="submit">Send Message 🚀</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Yuvika B M. All rights reserved.</p>
+    </footer>
+</body>
+</html>
